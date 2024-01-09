@@ -1,0 +1,65 @@
+@import "../../mixins.scss";
+
+.habit {
+  padding: 10px;
+
+  .habit-heading {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .daily-status {
+    max-width: 100%;
+    height: 100%;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;
+
+    @include md {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .not-done {
+      background-color: rgb(255, 218, 224);
+      color: red;
+    }
+
+    .untracked {
+      background-color: lightgray;
+      color: #000;
+    }
+
+    .done {
+      background-color: rgb(198, 255, 198);
+      color: green;
+    }
+
+    .day {
+      padding: 10px;
+      font-weight: 600;
+      flex: 1;
+      aspect-ratio: 1;
+      border: 1px dashed gray;
+      border-radius: 5px;
+      box-shadow: 2px 2px 5px gray;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+
+      @include md {
+        min-width: 20%;
+        max-width: 20%;
+        aspect-ratio: 1;
+      }
+
+      @include sm {
+        min-width: 40%;
+        max-width: 40%;
+        aspect-ratio: 1;
+      }
+    }
+  }
+}
